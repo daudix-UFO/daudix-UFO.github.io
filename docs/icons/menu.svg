@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
-  <g id="그룹_1" data-name="그룹 1" transform="translate(-125 -76)">
-    <rect id="사각형_1" data-name="사각형 1" width="128" height="128" transform="translate(125 76)" fill="none"/>
-    <line id="선_1" data-name="선 1" x2="62" transform="translate(158 112)" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-width="15"/>
-    <line id="선_2" data-name="선 2" x2="48" transform="translate(158 140)" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-width="15"/>
-    <line id="선_3" data-name="선 3" x2="58" transform="translate(158 168)" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-width="15"/>
-  </g>
-</svg>

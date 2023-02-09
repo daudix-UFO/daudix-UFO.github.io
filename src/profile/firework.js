@@ -3,11 +3,11 @@
 // https://github.com/xu-weixin/Fireworks-effect
 
 let date = new Date()
-if (date.getMonth() != 8 || date.getDate() != 2) {
+if (date.getMonth() != 10 || date.getDate() != 4) {
     return
 }
 
-//对requestAnimationFrame做兼容性操作
+//requestAnimationFrame
 window.requestAnimFrame = ( function() {
     return window.requestAnimationFrame ||
         window.webkitRequestAnimationFrame ||

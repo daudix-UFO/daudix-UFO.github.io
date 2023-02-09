@@ -1,4 +1,4 @@
-//todo: 프로필 마우스 호버시 자세한 정보 보여주기
+//todo: show detailed information on profile mouse hover
 
 async function fetchAsync (url) {
     let response = await fetch(url)
@@ -6,7 +6,7 @@ async function fetchAsync (url) {
     return data
 }
 
-// 스낵바 함수
+// snakbar function
 let snakbar = document.querySelector("#snakbar")
 let snakbarContent = snakbar.querySelector("#snakbar-content")
 let snakbarCount = 0
@@ -21,36 +21,36 @@ function showSnakbar(message) {
     },4000)
 }
 
-// 생일날에 이모티콘들 보여주기
+// show emoticons on your birthday
 let date = new Date()
-if (date.getMonth() == 8 && date.getDate() == 2) {
+if (date.getMonth() == 10 && date.getDate() == 4) {
     document.querySelectorAll("#birthday-effect-icon-holder").forEach((item) => {
         item.classList.add("enabled")
     })
     document.querySelector("#birthday-effect-canvas").classList.add("enabled")
 }
 
-// 나이 정해주기
-document.querySelector("#profile-ages").textContent = date.getFullYear() - 2004 + " (2005 년생)"
+// determine the age
+document.querySelector("#profile-ages").textContent = date.getFullYear() - 2007 + " (born in 2007)"
 
-// 닫기 버튼...?
+// close button...?
 document.querySelector("#titlebar-icon-1").addEventListener("click",()=>{
     window.close()
 })
 
-// 디코상태 정하기
-const userId = "367946917197381644"
+// setting the Discord state
+const userId = "650757995378114581"
 let discordName = false
 async function discordMain() {
     let discordData = (await fetchAsync(`https://api.lanyard.rest/v1/users/${userId}`))?.data
     // console.log(discordData)
     if (discordData) {
-        // 상태
+      // situation
         document.querySelector("#profile-picture-status").setAttribute("status",discordData.discord_status)
 
         let user = discordData.discord_user
         if (user) {
-            // 프로필
+      // profile
             let avatar = user.avatar
             document.querySelector("#profile-picture").setAttribute("src",
                 `https://cdn.discordapp.com/avatars/${userId}/${avatar}.${avatar.startsWith("a_") ? "gif" : "png"}?size=2048`
@@ -69,7 +69,7 @@ async function discordMain() {
 }
 discordMain()
 
-// 이스터애그?
+// easter egg?
 let count = localStorage.getItem("titlebar-check-count") || 0
 document.querySelector("#titlebar-title").addEventListener("click",()=>{
     localStorage.setItem("titlebar-check-count",++count)

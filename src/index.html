@@ -2,37 +2,46 @@
 <html lang="en">
 <head>
   <!--DO NOT BUILD-->
-  <!--META:title:프로필-->
-  <!--OG-->
+  <!--META:title:Daudix's Profile-->
+
   <meta property="og:type" content="article">
-  <!-- <meta property="og:url" content=""> -->
-  <meta property="og:title" content="쿼리링의 소개 사이트">
+  <meta property="og:title" content="Daudix's Profile">
 
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>냠~</title>
+
+  <title>Daudix UFO</title>
+
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  
   <link rel="stylesheet" href="profile/style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <script src="https://kit.fontawesome.com/d68c100399.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
-  <!-- 생일에 보여줄 이팩트 -->
+  <!-- effects to show on your birthday -->
   <canvas id="birthday-effect-canvas" class="enabled"></canvas>
-  <!-- 미리 로드될 콘텐츠 -->
+
+  <!-- content to be preloaded -->
   <span id="preloading" class="material-symbols-outlined">arrow_forward</span>
-  <!-- 바닥 팝업 -->
+
+  <!-- floor pop up -->
   <div id="snakbar-holder">
     <div id="snakbar" class="window">
       <p id="snakbar-content"></p>
     </div>
   </div>
-  <!-- 콘텐츠 -->
+
+  <!-- contents -->
   <div id="content" class="window">
     <div id="titlebar">
       <div id="titlebar-icon-1" class="titlebar-icon"></div>
       <div id="titlebar-icon-2" class="titlebar-icon"></div>
       <div id="titlebar-icon-3" class="titlebar-icon"></div>
-      <p id="titlebar-title">쿼리쿼리 프로필!!</p>
+      <p id="titlebar-title">Daudix's Profile</p>
     </div>
     <div id="birthday-effect-icon-holder">
       <p id="birthday-effect-icon1" class="birthday-effect-icon">🎂</p>
@@ -43,91 +52,34 @@
         <p id="birthday-effect-icon1" class="birthday-effect-icon">🎂</p>
         <p id="birthday-effect-icon2" class="birthday-effect-icon">🎉️</p>
       </div>
-      <img id="profile-picture" src="image/profile/profile.jpg" alt="로드중">
+      <img id="profile-picture" src="image/profile/profile.png" alt="Profile picture">
       <div id="profile-picture-status"></div>
     </div>
     <p id="profile-name">
-      쿼리<span id="profile-name-aka"></span>
+   David<span id="profile-name-aka"></span>
     </p>
     <p id="profile-description">
-      웹개발과 컴퓨터에 관심이 많은 고등학생입니다!<br>
-      쓸모없고 필요도없는 버그 만들기 장인이에요<br>
-      궁금한게 있다면 마음껏 물어보세요!<br>
+      Hello there!<br>
+      I'm a guy that are interested in FOSS and tech<br>
+      TEST TEST TEST<br>
       <br>
-      <!-- Gender : 공개적으론 적어놓지 않아여<br> -->
-      <!-- 주요 활동 범위 : 디스코드, 트?위?터 (잘 아는 사람끼리만), 깃허브<br> -->
-      나이 : <span id="profile-ages">loading . . .</span>&nbsp;&nbsp;&nbsp; 생일 : 9월 2일&nbsp;&nbsp;&nbsp; <span id="profile-email">qwreey75@gmail.com</span><br>
-      <!-- <br> -->
-      <!-- 호칭 : 님/상 에서부터 모든것 (누나/언니/형/오빠 포함) 써도됨 (편견X)<br> -->
+   Age : <span id="profile-ages">loading…</span>&nbsp;&nbsp;&nbsp; Birthday: October 4th&nbsp;&nbsp;&nbsp; <span id="profile-email">ddaudix@gmail.com</span><br>
 
     </p>
     <div class="diver-horizontal"></div>
     <div id="links">
-      <a href="https://www.youtube.com/channel/UC4L5HGYNdaNkbggrU3KGbvA" target="_blank">
-        <div class="button">
-          <img class="button-icon" src="image/profile/icon-youtube.png">
-          <p class="button-text">유튜브</p>
-          <div class="button-text-hover">
-            <p>열기</p>
-            <span class="material-symbols-outlined">arrow_forward</span>
-          </div>
-        </div>
-      </a>
 
-      <a href="https://steamcommunity.com/id/cattysAreCute/" target="_blank">
-        <div class="button">
-          <img class="button-icon" src="image/profile/icon-steam.png">
-          <p class="button-text">스팀</p>
-          <div class="button-text-hover">
-            <p>열기</p>
-            <span class="material-symbols-outlined">arrow_forward</span>
-          </div>
-        </div>
-      </a>
+      <button type="button" class="button">
 
-      <!-- <a href="https://twitter.com/" target="_blank"> -->
-        <div class="button">
-          <img class="button-icon" src="image/profile/icon-twitter.png">
-          <p class="button-text">트위터</p>
-          <div class="button-text-hover">
-            <p>비밀 ㅎㅎ</p>
-            <!-- <span class="material-symbols-outlined">arrow_forward</span> -->
-          </div>
-        </div>
-      <!-- </a> -->
-    </div>
-    <div id="links">
+        <i class="fa-brands fa-youtube"></i>
 
-      <div class="button" id="discord-button">
-        <img class="button-icon" src="image/profile/icon-discord.png">
-        <p class="button-text">디스코드</p>
-        <div class="button-text-hover">
-          <p>아이디 복사</p>
-          <span class="material-symbols-outlined">assignment_add</span>
-        </div>
-      </div>
+      </button>
 
-      <a href="https://github.com/qwreey75/" target="_blank">
-        <div class="button">
-          <img class="button-icon" src="image/profile/icon-github.png">
-          <p class="button-text">깃헙</p>
-          <div class="button-text-hover">
-            <p>열기</p>
-            <span class="material-symbols-outlined">arrow_forward</span>
-          </div>
-        </div>
-      </a>
+      <button type="button" class="button">
 
-      <a href="https://www.twitch.tv/qwreey75" target="_blank">
-        <div class="button">
-          <img class="button-icon" src="image/profile/icon-twitch.png">
-          <p class="button-text">트위치</p>
-          <div class="button-text-hover">
-            <p>열기</p>
-            <span class="material-symbols-outlined">arrow_forward</span>
-          </div>
-        </div>
-      </a>
+        <i class="fa-brands fa-youtube"></i>
+
+      </button>
 
     </div>
   </div>
