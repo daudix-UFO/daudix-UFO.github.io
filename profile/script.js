@@ -21,7 +21,7 @@ function showSnakbar(message) {
     },4000)
 }
 
-// show emoticons on your birthday
+// show emojis on birthday
 let date = new Date()
 if (date.getMonth() == 10 && date.getDate() == 4) {
     document.querySelectorAll("#birthday-effect-icon-holder").forEach((item) => {
@@ -30,12 +30,45 @@ if (date.getMonth() == 10 && date.getDate() == 4) {
     document.querySelector("#birthday-effect-canvas").classList.add("enabled")
 }
 
-// determine the age
+// determine age
 document.querySelector("#profile-ages").textContent = date.getFullYear() - 2007 + " (born in 2007)"
 
-// close button...?
+// close button
 document.querySelector("#titlebar-icon-1").addEventListener("click",()=>{
     window.close()
+})
+
+// minimize button (Portal Toilet)
+document.querySelector("#titlebar-icon-2").addEventListener("click",()=>{
+    var userPreference;
+
+    if (confirm("Flush Toilet?") == true) {
+
+        var audio = new Audio('profile/toilet_flush.wav');
+        audio.play();
+
+        setTimeout(function(){
+            var audio = new Audio('profile/usetoilet_thank.wav');
+            audio.play();
+        }, 1200); 
+
+    } else {
+        userPreference = "Flush Cancelled!";
+    }
+    
+})
+
+// maximize button
+document.querySelector("#titlebar-icon-3").addEventListener("click",()=>{
+    var name = prompt("Enter your name:", "David");
+
+if (name == null || name == "") {
+    alert("Please enter something, preferably your name");
+}
+else
+{
+    document.getElementById("profile-name").innerHTML = ("Heeey, what's up, " + name);
+}
 })
 
 // setting the Discord state
@@ -74,105 +107,120 @@ let count = localStorage.getItem("titlebar-check-count") || 0
 document.querySelector("#titlebar-title").addEventListener("click",()=>{
     localStorage.setItem("titlebar-check-count",++count)
     if (count == 1) {
-        showSnakbar("눌러도 아무것도 없어요")
+        showSnakbar("Oh, umm, hello?")
     } else if (count == 10) {
-        showSnakbar("왜 눌러요?")
+        showSnakbar("Why are you pressing this button?")
     } else if (count == 20) {
-        showSnakbar("거참 아무것도 없다니까요")
+        showSnakbar("You are not supposed to do so")
     } else if (count == 30) {
-        showSnakbar("말을 믿을 수 없는건가요오...?")
+        showSnakbar("Are you OK?")
     } else if (count == 40) {
-        showSnakbar("슬슬 질릴꺼 같은데")
+        showSnakbar("You are spending your valuable time…")
     } else if (count == 50) {
-        showSnakbar("이거 재미있는거 맞죠?")
+        showSnakbar("You could use this time for something more interesting TBH")
     } else if (count == 60) {
-        showSnakbar("흠... 언제까지 누르실꺼에요")
+        showSnakbar("Oh god…")
     } else if (count == 70) {
-        showSnakbar("벌써 70 번이나 누르셨는데...")
+        showSnakbar("Let me make it clear, there is nothing interesting")
     } else if (count == 80) {
-        showSnakbar("어디까지 가나 봅시당👾")
+        showSnakbar("👾 You pressed this button as many times as average life span 👾")
     } else if (count == 90) {
-        showSnakbar("좀만 더하면 백번이에요!")
+        showSnakbar("You are close to century! (or schizophrenia)")
     } else if (count == 100) {
-        showSnakbar("정말 대단해요 100 번을 누르셨어요")
+        showSnakbar("🎉 Congratulations, you have pressed this button 100 times 🎉")
+        var audio = new Audio('profile/sad_party_horn.wav');
+        audio.play();
     } else if (count == 110) {
-        showSnakbar("달성할만한거 다 달성하신거 같은데")
+        showSnakbar("Oh wow, you are so good at pressing buttons…")
     } else if (count == 120) {
-        showSnakbar("언제까지 누르실꺼죵 ㅋㅋㅋㅋㅋ")
+        showSnakbar("Are you Stanley?")
     } else if (count == 200) {
-        showSnakbar("오 여기까지 왔네요?")
+        showSnakbar("No, Stanley would already stop")
     } else if (count == 210) {
-        showSnakbar("말 안하면 갈 줄 알았지...")
+        showSnakbar("10 more, 10 less, who cares?")
     } else if (count == 220) {
-        showSnakbar("나 이제 이거 쓰는거 힘들어요")
+        showSnakbar("Well, looks like you have a bunch of free time")
     } else if (count == 230) {
-        showSnakbar("그.. 그만해애")
+        showSnakbar("This is OK")
     } else if (count == 250) {
-        showSnakbar("손 안아파요?")
+        showSnakbar("Just a tip, you can continue pressing buttons later")
     } else if (count == 260) {
-        showSnakbar("난 손아픈데...")
+        showSnakbar("Hi, did you actually took a break?")
     } else if (count == 270) {
-        showSnakbar("진짜 if 문을 몇개쓰는거지")
+        showSnakbar("If the answer is no, why?")
     } else if (count == 280) {
-        showSnakbar("스위치문 쓸까...")
+        showSnakbar("Nothing will change while you are not looking")
     } else if (count == 290) {
-        showSnakbar("이미 파버린 무덤")
+        showSnakbar("Right?")
     } else if (count == 300) {
-        showSnakbar("끝까지 if 로 밀고가죠!")
+        showSnakbar("Look behind you…")
     } else if (count == 320) {
-        showSnakbar("근데 있잖아요")
+        showSnakbar("Help")
     } else if (count == 330) {
-        showSnakbar("시간이 남아도나요?")
+        showSnakbar("You are hurting me")
     } else if (count == 340) {
-        showSnakbar("이런 쓸모없는거나 보고 있고")
+        showSnakbar("I can't hold this pain any longer")
     } else if (count == 350) {
-        showSnakbar("점점 졸린데... 밤 새서")
+        showSnakbar("You monster")
     } else if (count == 360) {
-        showSnakbar("잠시 자다 올까요?")
+        showSnakbar("The cake is in the kitchen")
     } else if (count == 370) {
-        showSnakbar("아무래도 그래야겠네요")
+        showSnakbar("It's so delicious and moist")
     } else if (count == 380) {
-        showSnakbar("좀이따 올깨요...")
+        showSnakbar("Only one piece left")
     } else if (count == 500) {
-        showSnakbar("아니 진짜 안가요??")
+        showSnakbar("You don't like cakes?")
     } else if (count == 510) {
-        showSnakbar("밥먹으로 감여")
+        showSnakbar("Maybe you like pun-cakes")
     } else if (count == 600) {
-        showSnakbar("와 ㅋㅋㅋㅋ 아직도 남아있네")
+        showSnakbar("Are you tired of my gags?")
     } else if (count == 610) {
-        showSnakbar("무슨짓인지 모르겠네요")
+        showSnakbar("Probably…")
     } else if (count == 620) {
-        showSnakbar("이거도 광기인거 아시죠?")
+        showSnakbar("My advice is to close this window and go on")
     } else if (count == 630) {
-        showSnakbar("뭐 아니라면 그냥 궁금한거겠지")
+        showSnakbar("Now when only most patient ones are here, let me tell you something…")
     } else if (count == 700) {
-        showSnakbar("음 여기까지 온거보면 순진하진 않네요")
+        showSnakbar("Or you know what, no")
     } else if (count == 710) {
-        showSnakbar("벌써 710 번이나 눌렀어요")
+        showSnakbar("Instead, let me tell you a joke")
     } else if (count == 720) {
-        showSnakbar("끝을 보겠다는건가요")
+        showSnakbar("Why did the chicken cross the road?")
     } else if (count == 800) {
-        showSnakbar("그만눌러주세요...")
+        showSnakbar("To press buttons on the other side")
     } else if (count == 810) {
-        showSnakbar("너무 힘들어요...")
+        showSnakbar("This is very funny joke")
     } else if (count == 820) {
-        showSnakbar("ㅜㅠㅠㅜㅠㅜㅜㅠ")
+        showSnakbar("Because you are like chicken")
     } else if (count == 830) {
-        showSnakbar("자꾸 누르면 삐질꺼에요")
+        showSnakbar("Pressing buttons, waiting for surprise")
     } else if (count == 840) {
-        showSnakbar("누르지 마요!!")
+        showSnakbar("Kinda predictable")
     } else if (count == 850) {
-        showSnakbar("힝")
+        showSnakbar("So I have made one for you, while you were pressing buttons")
     } else if (count == 860) {
-        showSnakbar("삐질꺼야...")
+        showSnakbar("And it's pretty close")
     } else if (count == 870) {
-        showSnakbar("나 경고했어!!")
+        showSnakbar("Are you exited to see it?")
     } else if (count == 880) {
-        showSnakbar("진짜 마지막이야!!")
+        showSnakbar("Me too")
     } else if (count == 890) {
-        showSnakbar("정말정말 진짜 마지막으로 봐준다!!!!")
+        showSnakbar("Yesss, very hot")
     } else if (count == 900) {
-        showSnakbar("힝 삐짐")
+        showSnakbar("You are close…")
+    } else if (count == 1000) {
+        showSnakbar("🎉 Congratulations, you have pressed this button 1000 times 🎉")
+        var audio = new Audio('profile/sad_party_horn.wav');
+        audio.play();
+
+        setTimeout(function(){
+            showSnakbar("Here is your surprise!")
+            setTimeout(function(){
+                window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+                window.close()
+            }, 4800);
+        }, 4800);
+
         document.querySelector("#titlebar-title").style.display = "none"
         localStorage.setItem("titlebar-hidden",true)
     }
