@@ -134,7 +134,7 @@ body {
 #profile-picture:hover {
     transform: scale(1.2);
     transition: transform 200ms ease-out;
-  }
+}
 
 /* profile name */
 #profile-name {
@@ -167,7 +167,7 @@ body {
 }
 
 /* small screen support */
-@media only screen and (max-width: 570px) {
+@media only screen and (max-width: 600px) {
   body {
     overflow-y: hidden;
   }
