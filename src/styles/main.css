@@ -117,13 +117,12 @@ body {
   width: 128px;
   height: 128px;
   border-radius: 100%;
-  box-shadow: 0px 0px 32px -8px rgba(0, 0, 0, 0.36);
-  transition: transform 300ms ease-out;
+  box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.36);
+  transition: transform 200ms ease-out;
 }
 
 #profile-picture:hover {
   transform: scale(1.2);
-  transition: transform 200ms ease-out;
 }
 
 #profile-name {
@@ -183,7 +182,7 @@ body {
   }
 }
 #content {
-  animation: 0.4s linear 0s 1 unbluring;
+  animation: 400ms ease-out 0ms 1 unbluring;
 }
 
 /* enable mail copy */
@@ -193,12 +192,12 @@ body {
 
 /* birthday effect */
 #birthday-effect-canvas {
-  display: none;
+  display:none;
 }
 #birthday-effect-canvas.enabled {
   pointer-events: none;
   width: 100% !important;
-  height: 100% !important;
+  height: 100%  !important;
   z-index: 1000;
   display: block;
   position: absolute;
@@ -209,10 +208,10 @@ body {
 #birthday-effect-icon-holder {
   display: none;
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 570px) {
   .birthday-effect-icon {
     font-size: 6rem;
-    margin: 64px 16px;
+    margin: 64px 18px;
   }
   :not(.mobile)#birthday-effect-icon-holder.enabled {
     position: absolute;
@@ -224,13 +223,13 @@ body {
 @media only screen and (max-width: 570px) {
   .birthday-effect-icon {
     font-size: 3rem;
-    margin: 32px 16px;
+    margin: 32px 18px;
   }
   .mobile#birthday-effect-icon-holder.enabled {
     position: absolute;
     left: -22px;
-    width: calc(100% + 48px);
-    top: -22px;
+    width: calc(100% + 44px);
+    top:-22px;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -307,6 +306,17 @@ body {
   background-color: var(--green3);
 }
 
+@keyframes socialsScaling {
+  0% {
+    transform: translateY(-50%) rotateX(90deg);
+    /* transform: translateY(16px); */
+  }
+  100% {
+    scale: none;
+    transform: none;
+  }
+}
+
 #socialicons {
   /* margin: 2rem auto 4rem; */
   max-width: 50vw;
@@ -317,10 +327,11 @@ body {
 }
 
 #socialicons a.socials {
+  animation: 400ms ease-out 0ms 1 socialsScaling;
   display: inline-block;
   width: 32px;
   height: 32px;
-  transition: transform 200ms ease-out;
+  transition: transform 200ms ease-in;
   margin: 1rem;
 }
 .socials path {
