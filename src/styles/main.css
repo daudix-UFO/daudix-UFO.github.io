@@ -208,10 +208,10 @@ body {
 #birthday-effect-icon-holder {
   display: none;
 }
-@media only screen and (min-width: 570px) {
+@media only screen and (min-width: 600px) {
   .birthday-effect-icon {
     font-size: 6rem;
-    margin: 64px 18px;
+    margin: 64px 16px;
   }
   :not(.mobile)#birthday-effect-icon-holder.enabled {
     position: absolute;
@@ -220,10 +220,10 @@ body {
     justify-content: space-between;
   }
 }
-@media only screen and (max-width: 570px) {
+@media only screen and (max-width: 600px) {
   .birthday-effect-icon {
     font-size: 3rem;
-    margin: 32px 18px;
+    margin: 32px 16px;
   }
   .mobile#birthday-effect-icon-holder.enabled {
     position: absolute;
