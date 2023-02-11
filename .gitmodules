@@ -1,9 +1,0 @@
-[submodule "deps/promise"]
-	path = deps/promise
-	url = https://github.com/qwreey75/promise.lua
-[submodule "deps/logger"]
-	path = deps/logger
-	url = https://github.com/qwreey75/logger.lua
-[submodule "deps/random"]
-	path = deps/random
-	url = https://github.com/qwreey75/random.lua
