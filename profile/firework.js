@@ -3,7 +3,7 @@
 // https://github.com/xu-weixin/Fireworks-effect
 
 let date = new Date()
-if (date.getMonth() != 10 || date.getDate() != 4) {
+if (date.getMonth() != 9 || date.getDate() != 4) {
     return
 }
 

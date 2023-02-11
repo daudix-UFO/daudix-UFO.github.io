@@ -23,7 +23,7 @@ function showSnakbar(message) {
 
 // show emojis on birthday
 let date = new Date()
-if (date.getMonth() == 10 && date.getDate() == 4) {
+if (date.getMonth() == 9 && date.getDate() == 4) {
     document.querySelectorAll("#birthday-effect-icon-holder").forEach((item) => {
         item.classList.add("enabled")
     })
