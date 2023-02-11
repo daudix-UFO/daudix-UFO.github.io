@@ -45,6 +45,7 @@
   --dark4: rgb(36, 31, 49);
   --dark5: rgb(0, 0, 0);
   --text: #f6f5f4;
+  --shadow: rgba(0, 0, 0, 0.36);
 
   /* font */
   font-family: "Inter", sans-serif;
@@ -89,7 +90,7 @@ body {
 }
 
 .window {
-  box-shadow: 0px 8px 32px -8px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 8px 32px -8px var(--shadow);
   border: solid 1px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(12px);
   background-color: rgba(36, 36, 36, 0.4);
@@ -117,7 +118,7 @@ body {
   width: 128px;
   height: 128px;
   border-radius: 100%;
-  box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.36);
+  box-shadow: 0px 0px 16px -8px var(--shadow);
   transition: transform 200ms ease-out;
 }
 
@@ -306,20 +307,16 @@ body {
   background-color: var(--green3);
 }
 
-@keyframes socialsLoading {
-  0% {
-    transform: translateY(-50%) rotateX(90deg);
-    /* transform: translateY(16px); */
-  }
-  100% {
-    scale: none;
-    transform: none;
-  }
+.fa-brands {
+  padding: 1pt;
+  font-size: 32px;
+  text-align: center;
+  text-decoration: none;
 }
 
 #socialicons {
   /* margin: 2rem auto 4rem; */
-  max-width: 50vw;
+  max-width: 80vw;
   display: grid;
   /* grid-template-columns: repeat(4, 1fr); */
   grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
@@ -327,7 +324,6 @@ body {
 }
 
 #socialicons a.socials {
-  animation: 400ms ease-out 0ms 1 socialsLoading;
   display: inline-block;
   width: 32px;
   height: 32px;
@@ -337,6 +333,9 @@ body {
 .socials path {
   fill: var(--text);
 }
+.socials {
+  color: var(--text);
+}
 #socialicons a.socials:hover {
   cursor: pointer;
   transform: scale(1.2);
@@ -344,6 +343,15 @@ body {
 .socials:hover path {
   fill: var(--light3);
 }
+
+.socials:hover {
+  color: var(--light3);
+}
+
 .socials:active path {
   fill: var(--dark1);
+}
+
+.socials:active {
+  color: var(--dark1);
 }
