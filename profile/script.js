@@ -31,7 +31,7 @@ if (date.getMonth() == 10 && date.getDate() == 4) {
 }
 
 // determine age
-document.querySelector("#profile-ages").textContent = date.getFullYear() - 2007
+// document.querySelector("#profile-ages").textContent = date.getFullYear() - 2007
 
 // close button
 document.querySelector("#titlebar-icon-1").addEventListener("click",()=>{
