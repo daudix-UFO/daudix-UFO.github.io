@@ -331,7 +331,7 @@ body {
   display: inline-block;
   width: 32px;
   height: 32px;
-  transition: transform 200ms ease-in;
+  transition: transform 200ms ease-out;
   margin: 1rem;
 }
 .socials path {
