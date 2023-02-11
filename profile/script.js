@@ -31,7 +31,7 @@ if (date.getMonth() == 10 && date.getDate() == 4) {
 }
 
 // determine age
-document.querySelector("#profile-ages").textContent = date.getFullYear() - 2007 + " (born in 2007)"
+document.querySelector("#profile-ages").textContent = date.getFullYear() - 2007
 
 // close button
 document.querySelector("#titlebar-icon-1").addEventListener("click",()=>{
@@ -44,11 +44,11 @@ document.querySelector("#titlebar-icon-2").addEventListener("click",()=>{
 
     if (confirm("Flush Toilet?") == true) {
 
-        var audio = new Audio('profile/toilet_flush.wav');
+        var audio = new Audio('profile/assets/sounds/toilet_flush.wav');
         audio.play();
 
         setTimeout(function(){
-            var audio = new Audio('profile/usetoilet_thank.wav');
+            var audio = new Audio('profile/assets/sounds/usetoilet_thank.wav');
             audio.play();
         }, 1200); 
 
@@ -70,37 +70,6 @@ else
     document.getElementById("profile-name").innerHTML = ("Heeey, what's up, " + name);
 }
 })
-
-// setting the Discord state
-const userId = "650757995378114581"
-let discordName = false
-async function discordMain() {
-    let discordData = (await fetchAsync(`https://api.lanyard.rest/v1/users/${userId}`))?.data
-    // console.log(discordData)
-    if (discordData) {
-      // situation
-        document.querySelector("#profile-picture-status").setAttribute("status",discordData.discord_status)
-
-        let user = discordData.discord_user
-        if (user) {
-      // profile
-            let avatar = user.avatar
-            document.querySelector("#profile-picture").setAttribute("src",
-                `https://cdn.discordapp.com/avatars/${userId}/${avatar}.${avatar.startsWith("a_") ? "gif" : "png"}?size=2048`
-            )
-
-            document.querySelector("#profile-name-aka").textContent = ` (aka ${user.username})`
-
-            discordName = `${user.username}#${user.discriminator}`
-            document.querySelector("#discord-button").addEventListener('click',()=>{
-                navigator.clipboard.writeText(discordName)
-                showSnakbar("클립보드에 복사되었습니다!")
-            })
-            // document.querySelector.addEventListener('mouseover', (event) => {});
-        }
-    }
-}
-discordMain()
 
 // easter egg?
 let count = localStorage.getItem("titlebar-check-count") || 0
@@ -128,7 +97,7 @@ document.querySelector("#titlebar-title").addEventListener("click",()=>{
         showSnakbar("You are close to century! (or schizophrenia)")
     } else if (count == 100) {
         showSnakbar("🎉 Congratulations, you have pressed this button 100 times 🎉")
-        var audio = new Audio('profile/sad_party_horn.wav');
+        var audio = new Audio('profile/assets/sounds/sad_party_horn.wav');
         audio.play();
     } else if (count == 110) {
         showSnakbar("Oh wow, you are so good at pressing buttons…")
@@ -210,7 +179,7 @@ document.querySelector("#titlebar-title").addEventListener("click",()=>{
         showSnakbar("You are close…")
     } else if (count == 1000) {
         showSnakbar("🎉 Congratulations, you have pressed this button 1000 times 🎉")
-        var audio = new Audio('profile/sad_party_horn.wav');
+        var audio = new Audio('profile/assets/sounds/sad_party_horn.wav');
         audio.play();
 
         setTimeout(function(){
