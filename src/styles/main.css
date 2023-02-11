@@ -306,7 +306,7 @@ body {
   background-color: var(--green3);
 }
 
-@keyframes socialsScaling {
+@keyframes socialsLoading {
   0% {
     transform: translateY(-50%) rotateX(90deg);
     /* transform: translateY(16px); */
@@ -327,7 +327,7 @@ body {
 }
 
 #socialicons a.socials {
-  animation: 400ms ease-out 0ms 1 socialsScaling;
+  animation: 400ms ease-out 0ms 1 socialsLoading;
   display: inline-block;
   width: 32px;
   height: 32px;
