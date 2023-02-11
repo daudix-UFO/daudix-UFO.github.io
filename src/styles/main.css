@@ -1,58 +1,60 @@
 :root {
-  --blue1: rgb(153,193,241);
-  --blue2: rgb(98,160,234);
-  --blue3: rgb(53,132,228);
-  --blue4: rgb(28,113,216);
-  --blue5: rgb(26,95,180);
-  --green1: rgb(143,240,164);
-  --green2: rgb(87,227,137);
-  --green3: rgb(51,209,122);
-  --green4: rgb(46,194,126);
-  --green5: rgb(38,162,105);
-  --yellow1: rgb(249,240,107);
-  --yellow2: rgb(248,228,92);
-  --yellow3: rgb(246,211,45);
-  --yellow4: rgb(245,194,17);
-  --yellow5: rgb(229,165,10);
-  --orange1: rgb(255,190,111);
-  --orange2: rgb(255,163,72);
-  --orange3: rgb(255,120,0);
-  --orange4: rgb(230,97,0);
-  --orange5: rgb(198,70,0);
-  --red1: rgb(246,97,81);
-  --red2: rgb(237,51,59);
-  --red3: rgb(224,27,36);
-  --red4: rgb(192,28,40);
-  --red5: rgb(165,29,45);
-  --purple1: rgb(220,138,221);
-  --purple2: rgb(192,97,203);
-  --purple3: rgb(145,65,172);
-  --purple4: rgb(129,61,156);
-  --purple5: rgb(97,53,131);
-  --brown1: rgb(205,171,143);
-  --brown2: rgb(181,131,90);
-  --brown3: rgb(152,106,68);
-  --brown4: rgb(134,94,60);
-  --brown5: rgb(99,69,44);
-  --light1: rgb(255,255,255);
-  --light2: rgb(246,245,244);
-  --light3: rgb(222,221,218);
-  --light4: rgb(192,191,188);
-  --light5: rgb(154,153,150);
-  --dark1: rgb(119,118,123);
-  --dark2: rgb(94,92,100);
-  --dark3: rgb(61,56,70);
-  --dark4: rgb(36,31,49);
-  --dark5: rgb(0,0,0);
+  --blue1: rgb(153, 193, 241);
+  --blue2: rgb(98, 160, 234);
+  --blue3: rgb(53, 132, 228);
+  --blue4: rgb(28, 113, 216);
+  --blue5: rgb(26, 95, 180);
+  --green1: rgb(143, 240, 164);
+  --green2: rgb(87, 227, 137);
+  --green3: rgb(51, 209, 122);
+  --green4: rgb(46, 194, 126);
+  --green5: rgb(38, 162, 105);
+  --yellow1: rgb(249, 240, 107);
+  --yellow2: rgb(248, 228, 92);
+  --yellow3: rgb(246, 211, 45);
+  --yellow4: rgb(245, 194, 17);
+  --yellow5: rgb(229, 165, 10);
+  --orange1: rgb(255, 190, 111);
+  --orange2: rgb(255, 163, 72);
+  --orange3: rgb(255, 120, 0);
+  --orange4: rgb(230, 97, 0);
+  --orange5: rgb(198, 70, 0);
+  --red1: rgb(246, 97, 81);
+  --red2: rgb(237, 51, 59);
+  --red3: rgb(224, 27, 36);
+  --red4: rgb(192, 28, 40);
+  --red5: rgb(165, 29, 45);
+  --purple1: rgb(220, 138, 221);
+  --purple2: rgb(192, 97, 203);
+  --purple3: rgb(145, 65, 172);
+  --purple4: rgb(129, 61, 156);
+  --purple5: rgb(97, 53, 131);
+  --brown1: rgb(205, 171, 143);
+  --brown2: rgb(181, 131, 90);
+  --brown3: rgb(152, 106, 68);
+  --brown4: rgb(134, 94, 60);
+  --brown5: rgb(99, 69, 44);
+  --light1: rgb(255, 255, 255);
+  --light2: rgb(246, 245, 244);
+  --light3: rgb(222, 221, 218);
+  --light4: rgb(192, 191, 188);
+  --light5: rgb(154, 153, 150);
+  --dark1: rgb(119, 118, 123);
+  --dark2: rgb(94, 92, 100);
+  --dark3: rgb(61, 56, 70);
+  --dark4: rgb(36, 31, 49);
+  --dark5: rgb(0, 0, 0);
   --text: #f6f5f4;
 
-/* font */
-font-family: 'Inter', sans-serif;
-@supports (font-variation-settings: normal) {
-font-family: 'Inter var', sans-serif; }
+  /* font */
+  font-family: "Inter", sans-serif;
+  @supports (font-variation-settings: normal) {
+    font-family: "Inter var", sans-serif;
+  }
 }
 
-html, body {
+html,
+body {
   margin: 0px;
   width: 100%;
   height: 100%;
@@ -68,7 +70,7 @@ p {
   /* default text color */
   color: var(--text);
   /* default font */
-  font-family: 'Inter';
+  font-family: "Inter";
   /* margin: 16px; */
   text-align: center;
 }
@@ -88,9 +90,9 @@ body {
 
 .window {
   box-shadow: 0px 8px 32px -8px rgba(0, 0, 0, 0.8);
-  border: solid 1px rgba(0,0,0,0.2);
+  border: solid 1px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(12px);
-  background-color: rgba(36,36,36,0.4);
+  background-color: rgba(36, 36, 36, 0.4);
   border-radius: 12px;
 }
 
@@ -120,8 +122,8 @@ body {
 }
 
 #profile-picture:hover {
-    transform: scale(1.2);
-    transition: transform 200ms ease-out;
+  transform: scale(1.2);
+  transition: transform 200ms ease-out;
 }
 
 #profile-name {
@@ -140,7 +142,7 @@ body {
   margin: 0px 0px 6px 0px;
   width: 100%;
   height: 1px;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 #links {
@@ -156,7 +158,7 @@ body {
     overflow-y: hidden;
   }
   #content {
-    background-color: rgba(36,36,36,0.4);
+    background-color: rgba(36, 36, 36, 0.4);
     box-shadow: none;
     overflow-y: scroll;
     padding: 16px;
@@ -179,7 +181,6 @@ body {
   100% {
     opacity: none;
   }
-
 }
 #content {
   animation: 0.4s linear 0s 1 unbluring;
@@ -192,12 +193,12 @@ body {
 
 /* birthday effect */
 #birthday-effect-canvas {
-  display:none;
+  display: none;
 }
 #birthday-effect-canvas.enabled {
   pointer-events: none;
   width: 100% !important;
-  height: 100%  !important;
+  height: 100% !important;
   z-index: 1000;
   display: block;
   position: absolute;
@@ -229,7 +230,7 @@ body {
     position: absolute;
     left: -22px;
     width: calc(100% + 48px);
-    top:-22px;
+    top: -22px;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -237,7 +238,7 @@ body {
 }
 
 #snakbar {
-  z-index:1000;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -271,8 +272,8 @@ body {
   width: 100%;
   height: 48px;
   border-radius: 12px 12px 0px 0px;
-  background-color: rgba(48,48,48,0.4);
-  border-bottom: 1px rgba(0,0,0,0.2) solid;
+  background-color: rgba(48, 48, 48, 0.4);
+  border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
   position: relative;
   display: flex;
   align-items: center;
@@ -294,7 +295,7 @@ body {
 }
 #titlebar-icon-1 {
   cursor: pointer;
-  margin-left:12px;
+  margin-left: 12px;
   background-color: var(--red3);
 }
 #titlebar-icon-2 {
@@ -313,24 +314,25 @@ body {
   /* grid-template-columns: repeat(4, 1fr); */
   grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
   gap: 16px;
-  }
+}
 
-  #socialicons a.socials {
-    display: inline-block;
-    width: 32px; height: 32px;
-    transition: transform 200ms ease-out;
-    margin: 1rem;
-  }
-    .socials path {
-      fill: var(--text);
-    }
-      #socialicons a.socials:hover {
-        cursor: pointer;
-        transform: scale(1.2);
-      }
-      .socials:hover path {
-        fill: var(--light3);
-      }
-      .socials:active path {
-        fill: var(--dark1);
-      }
+#socialicons a.socials {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  transition: transform 200ms ease-out;
+  margin: 1rem;
+}
+.socials path {
+  fill: var(--text);
+}
+#socialicons a.socials:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+.socials:hover path {
+  fill: var(--light3);
+}
+.socials:active path {
+  fill: var(--dark1);
+}
