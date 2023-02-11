@@ -1,4 +1,3 @@
-
 :root {
   --blue1: rgb(153,193,241);
   --blue2: rgb(98,160,234);
@@ -48,18 +47,11 @@
   --text: #f6f5f4;
 
 /* font */
-
 font-family: 'Inter', sans-serif;
 @supports (font-variation-settings: normal) {
 font-family: 'Inter var', sans-serif; }
 }
 
-/* don't show icons when they don't load */
-.material-symbols-outlined {
-  font-display: optional;
-}
-
-/* basic setting */
 html, body {
   margin: 0px;
   width: 100%;
@@ -80,11 +72,11 @@ p {
   /* margin: 16px; */
   text-align: center;
 }
-a { /* remove links underline*/
+a {
+  /* remove links underline */
   text-decoration: none;
 }
 
-/* background image */
 body {
   background: url("../images/background.jpg") no-repeat center center fixed;
   background-size: cover;
@@ -94,7 +86,6 @@ body {
   justify-content: center;
 }
 
-/* window */
 .window {
   box-shadow: 0px 8px 32px -8px rgba(0, 0, 0, 0.8);
   border: solid 1px rgba(0,0,0,0.2);
@@ -103,9 +94,7 @@ body {
   border-radius: 12px;
 }
 
-/* content */
 #content {
-  
   /*arrangement*/
   margin: auto;
   display: flex;
@@ -120,7 +109,6 @@ body {
   padding-bottom: 14px;
 }
 
-/* profile picture */
 #profile-picture {
   display: inline-block;
   margin: 16px 0px 12px 0px;
@@ -136,21 +124,18 @@ body {
     transition: transform 200ms ease-out;
 }
 
-/* profile name */
 #profile-name {
   font-weight: bold;
   margin-bottom: 12px;
   font-size: 1.2rem;
 }
 
-/* profile description */
 #profile-description {
   margin-bottom: 12px;
   font-size: 1rem;
   line-height: 1.2rem;
 }
 
-/* dividing line */
 .diver-horizontal {
   margin: 0px 0px 6px 0px;
   width: 100%;
@@ -158,7 +143,6 @@ body {
   background-color: rgba(0,0,0,0.2);
 }
 
-/* links */
 #links {
   display: flex;
   flex-direction: row;
@@ -204,13 +188,6 @@ body {
 /* enable mail copy */
 #profile-email {
   user-select: text;
-}
-
-/* icon preload */
-#preloading {
-  position: absolute;
-  z-index: -999;
-  opacity: 0;
 }
 
 /* birthday effect */
@@ -259,7 +236,6 @@ body {
   }
 }
 
-/* floor pop up */
 #snakbar {
   z-index:1000;
   display: flex;
@@ -291,7 +267,6 @@ body {
   justify-content: center;
 }
 
-/* title bar */
 #titlebar {
   width: 100%;
   height: 48px;

@@ -1,5 +1,3 @@
-//todo: show detailed information on profile mouse hover
-
 async function fetchAsync (url) {
     let response = await fetch(url)
     let data = await response.json()
@@ -44,11 +42,11 @@ document.querySelector("#titlebar-icon-2").addEventListener("click",()=>{
 
     if (confirm("Flush Toilet?") == true) {
 
-        var audio = new Audio('profile/assets/sounds/toilet_flush.wav');
+        var audio = new Audio('src/sounds/toilet_flush.wav');
         audio.play();
 
         setTimeout(function(){
-            var audio = new Audio('profile/assets/sounds/usetoilet_thank.wav');
+            var audio = new Audio('src/sounds/usetoilet_thank.wav');
             audio.play();
         }, 1200); 
 
@@ -86,7 +84,7 @@ document.querySelector("#titlebar-title").addEventListener("click",()=>{
     } else if (count == 40) {
         showSnakbar("You are spending your valuable time…")
     } else if (count == 50) {
-        showSnakbar("You could use this time for something more interesting TBH")
+        showSnakbar("You could use this time for something more interesting tbh")
     } else if (count == 60) {
         showSnakbar("Oh god…")
     } else if (count == 70) {
@@ -97,7 +95,7 @@ document.querySelector("#titlebar-title").addEventListener("click",()=>{
         showSnakbar("You are close to century! (or schizophrenia)")
     } else if (count == 100) {
         showSnakbar("🎉 Congratulations, you have pressed this button 100 times 🎉")
-        var audio = new Audio('profile/assets/sounds/sad_party_horn.wav');
+        var audio = new Audio('src/sounds/sad_party_horn.wav');
         audio.play();
     } else if (count == 110) {
         showSnakbar("Oh wow, you are so good at pressing buttons…")
@@ -179,7 +177,7 @@ document.querySelector("#titlebar-title").addEventListener("click",()=>{
         showSnakbar("You are close…")
     } else if (count == 1000) {
         showSnakbar("🎉 Congratulations, you have pressed this button 1000 times 🎉")
-        var audio = new Audio('profile/assets/sounds/sad_party_horn.wav');
+        var audio = new Audio('src/sounds/sad_party_horn.wav');
         audio.play();
 
         setTimeout(function(){
