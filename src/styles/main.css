@@ -193,12 +193,12 @@ body {
 
 /* birthday effect */
 #birthday-effect-canvas {
-  display:none;
+  display: none;
 }
 #birthday-effect-canvas.enabled {
   pointer-events: none;
   width: 100% !important;
-  height: 100%  !important;
+  height: 100% !important;
   z-index: 1000;
   display: block;
   position: absolute;
@@ -230,7 +230,7 @@ body {
     position: absolute;
     left: -22px;
     width: calc(100% + 44px);
-    top:-22px;
+    top: -22px;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -340,18 +340,21 @@ body {
   cursor: pointer;
   transform: scale(1.2);
 }
-.socials:hover path {
-  fill: var(--light3);
-}
 
+/* FA */
 .socials:hover {
   color: var(--light3);
 }
 
-.socials:active path {
-  fill: var(--dark1);
-}
-
 .socials:active {
   color: var(--dark1);
+}
+
+/* SVG */
+.socials:hover path {
+  fill: var(--light3);
+}
+
+.socials:active path {
+  fill: var(--dark1);
 }
