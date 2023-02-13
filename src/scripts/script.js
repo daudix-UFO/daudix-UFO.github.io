@@ -4,12 +4,12 @@ async function fetchAsync(url) {
   return data;
 }
 
-/* Open */
+/* open navigation overlay */
 function openNav() {
   document.getElementById("navOverlay").style.height = "100%";
 }
 
-/* Close */
+/* close navigation overlay */
 function closeNav() {
   document.getElementById("navOverlay").style.height = "0%";
 } 
