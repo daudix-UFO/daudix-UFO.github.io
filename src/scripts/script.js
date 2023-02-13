@@ -4,6 +4,16 @@ async function fetchAsync(url) {
   return data;
 }
 
+/* Open */
+function openNav() {
+  document.getElementById("navOverlay").style.height = "100%";
+}
+
+/* Close */
+function closeNav() {
+  document.getElementById("navOverlay").style.height = "0%";
+} 
+
 // snakbar function
 let snakbar = document.querySelector("#snakbar");
 let snakbarContent = snakbar.querySelector("#snakbar-content");

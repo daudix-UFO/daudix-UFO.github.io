@@ -89,6 +89,59 @@ body {
   justify-content: center;
 }
 
+ /* overlay background */
+ .overlay {  
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgba(36, 36, 36, 0.8);
+  backdrop-filter: blur(12px);
+  overflow: hidden; /* Disable horizontal scroll */
+  transition: 400ms ease;
+}
+
+/* position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* the navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 24pt;
+  color: var(--text);
+  display: block; /* Display block instead of inline */
+  transition: 200ms ease-out; /* Transition effects on hover (color) */
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: var(--light5);
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 32px;
+}
+
+@media screen and (max-height: 600px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 24pt;
+    top: 15px;
+    right: 35px;
+  }
+}
+
 .window {
   box-shadow: 0px 8px 32px -8px var(--shadow);
   border: solid 1px rgba(0, 0, 0, 0.2);
@@ -161,7 +214,7 @@ body {
     background-color: rgba(36, 36, 36, 0.4);
     box-shadow: none;
     overflow-y: scroll;
-    padding: 16px;
+    /* padding: 16px; */
     /* justify-content: center; */
     width: 100%;
     height: 100%;
@@ -169,7 +222,11 @@ body {
     border-radius: 0px;
   }
   #titlebar {
-    display: none !important;
+    /* display: none !important; */
+    border-radius: 0px 0px 0px 0px !important;
+  }
+  #window {
+    border-radius: none !important;
   }
 }
 
@@ -183,7 +240,7 @@ body {
   }
 }
 #content {
-  animation: 400ms ease-out 0ms 1 unbluring;
+  animation: 400ms ease 0ms 1 unbluring;
 }
 
 /* enable mail copy */
@@ -306,7 +363,17 @@ body {
   cursor: pointer;
   background-color: var(--green3);
 }
+#titlebar-icon-4 {
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 12px;
+  color: var(--text);
+  text-align: center;
+  text-decoration: none;
+  padding: 1pt;
+}
 
+.socials
 .fa-brands {
   padding: 1pt;
   font-size: 32px;

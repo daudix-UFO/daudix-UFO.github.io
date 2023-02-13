@@ -24,6 +24,26 @@
 </head>
 
 <body>
+
+ <!-- navigation overlay -->
+<div id="navOverlay" class="overlay">
+
+  <!-- overlay close button -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></a>
+
+  <!-- overlay content -->
+  <div class="overlay-content">
+    <a href="#">About</a>
+    <a href="#">Portfolio</a>
+    <a href="#">Blog</a>
+    <a href="#">Contact</a>
+  </div>
+
+</div>
+
+<!-- use any element to open overlay -->
+<!-- <span onclick="openNav()">open</span>  -->
+
   <!-- effects to show on your birthday -->
   <canvas id="birthday-effect-canvas" class="enabled"></canvas>
 
@@ -40,6 +60,9 @@
       <div id="titlebar-icon-1" class="titlebar-icon"></div>
       <div id="titlebar-icon-2" class="titlebar-icon"></div>
       <div id="titlebar-icon-3" class="titlebar-icon"></div>
+      <div id="titlebar-icon-4" class="titlebar-icon" onclick="openNav()">
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+      </div>
       <p id="titlebar-title">Daudix's Profile</p>
     </div>
     <div id="birthday-effect-icon-holder">
@@ -60,6 +83,8 @@
     <p id="profile-description">
       Jumping around doing various stuff,<br>
       in the end can't settle on something specific<br>
+      <br>
+      My current OS: Fedora Silverblue <i class="fa-brands fa-fedora"></i><br>
     <br>
       <!-- Age : <span id="profile-ages">loading…</span>&nbsp;&nbsp;&nbsp; -->
     
