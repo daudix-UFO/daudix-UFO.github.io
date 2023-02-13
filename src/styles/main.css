@@ -213,8 +213,8 @@ body {
   #content {
     background-color: rgba(36, 36, 36, 0.4);
     box-shadow: none;
-    overflow-y: scroll;
-    padding: 16px;
+    /* overflow-y: scroll; */
+    /* padding: 16px; */
     /* justify-content: center; */
     width: 100%;
     height: 100%;
