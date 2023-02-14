@@ -99,8 +99,8 @@ body {
   top: 0;
   background-color: rgba(36, 36, 36, 0.8);
   backdrop-filter: blur(12px);
-  overflow: hidden; /* Disable horizontal scroll */
-  transition: 400ms ease;
+  overflow: hidden; /* disable scroll */
+  transition: 0.4s ease;
 }
 
 /* position the content inside the overlay */
@@ -119,7 +119,7 @@ body {
   font-size: 24pt;
   color: var(--text);
   display: block; /* Display block instead of inline */
-  transition: 200ms ease-out; /* Transition effects on hover (color) */
+  transition: 0.2s ease-out; /* Transition effects on hover (color) */
 }
 
 .overlay a:hover, .overlay a:focus {
@@ -172,7 +172,7 @@ body {
   height: 128px;
   border-radius: 100%;
   box-shadow: 0px 0px 16px -8px var(--shadow);
-  transition: transform 200ms ease-out;
+  transition: transform 0.2s ease-out;
 }
 
 #profile-picture:hover {
@@ -213,9 +213,7 @@ body {
   #content {
     background-color: rgba(36, 36, 36, 0.4);
     box-shadow: none;
-    /* overflow-y: scroll; */
     /* padding: 16px; */
-    /* justify-content: center; */
     width: 100%;
     height: 100%;
     border: none;
@@ -240,7 +238,7 @@ body {
   }
 }
 #content {
-  animation: 400ms ease 0ms 1 unbluring;
+  animation: 0.4s ease 0s 1 unbluring;
 }
 
 /* enable mail copy */
@@ -306,7 +304,7 @@ body {
   height: 50px;
   position: absolute;
   top: calc(100% + 40px);
-  transition: ease top 300ms;
+  transition: ease top 0.3s;
 }
 #snakbar.open {
   top: calc(100% - 72px);
@@ -394,7 +392,7 @@ body {
   display: inline-block;
   width: 32px;
   height: 32px;
-  transition: transform 200ms ease-out;
+  transition: transform 0.2s ease-out;
   margin: 1rem;
 }
 .socials path {
