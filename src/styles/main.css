@@ -49,6 +49,26 @@
   --text: #f6f5f4;
   --shadow: rgba(0, 0, 0, 0.36);
 
+  --lavender:     #8888CC;
+  --lime:         #bbdd33;
+  --lemon:        #eeee88;
+  --orange:       #ea8c10;
+  --strawberry:   #c94450;
+  --olive:        #729a68;
+  --sand:         #dcd3b0;
+  --sand-blue:    #68799a;
+  --sand-purple:  #9a6880;
+  --mustard:      #b86e0d;
+  --indigo:       #020222;
+  --cappuccino:   #866c4c;
+  --coffee:       #472b1b;
+  --chocolate:    #401e0d;
+  --pine:         #0d4036;
+  --aqua:         #48a1a4;
+  --sky:          #5a8ab2;
+  --copper:       #B87333;
+  --bronze:       #C88E4E;
+
   /* font */
   font-family: "Inter", sans-serif;
   @supports (font-variation-settings: normal) {
@@ -72,48 +92,6 @@ ul {
 
 li {
   float: left;
-}
-
-.button {
-  display: flex;
-  justify-content: space-around;
-  position: absolute;
-  cursor: none;
-  text-align: center;
-  width: 48px;
-  height: 48px;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.2s ease;
-}
-
-.button:hover {
-  background-color: var(--dark2); filter: saturate(0);
-  transition: 0.2s ease;
-  transform: scale(1.2);
-}
-
-.button-hover:hover ~ .cursor {
-  transform: translate(-50%, -50%) scale(2);
-}
-
-.button:active {
-  background-color: var(--dark1); filter: saturate(0);
-  transition: 0.2s ease;
-}
-
-.home-button {
-  align-self: flex-end;
-  background-color: var(--dark3); filter: saturate(0);
-  color: var(--text);
-  /* border: 2px solid var(--dark3); filter: saturate(0); */
-  border: none;
-  border-radius: 50%;
 }
 
 @keyframes pageFade {
@@ -142,11 +120,6 @@ nav {
   top: 50%;
 }
 
-.link-hover {
-  transition: all 0.3s ease;
-  cursor: none;
-}
-
 span {
   display: inline-block;
   font-family: "Inter";
@@ -156,20 +129,6 @@ span {
   text-transform: uppercase;
   pointer-events: none;
   transition: transform 0.1s linear;
-}
-
-.cursor {
-  position: fixed;
-  pointer-events: none;
-  padding: 6px;
-  background-color: var(--light1);
-  border-radius: 50%;
-  mix-blend-mode: difference;
-  transition: transform 0.3s ease;
-}
-
-.link-hover:hover ~ .cursor {
-  transform: translate(-50%, -50%) scale(8);
 }
 
 @media (min-width: 900px) {
@@ -186,9 +145,86 @@ span {
 
   .link-hover {
     width: 100%;
-    padding: 20px 0;
+    padding: 1rem 0;
     display: inline-block;
   }
+}
+
+@media (pointer: fine) {
+
+  .link-hover {
+    transition: all 0.3s ease;
+    cursor: none;
+  }
+  
+  .cursor {
+    position: fixed;
+    pointer-events: none;
+    width: 1rem;
+    height: 1rem;
+    transform: translate(-50%, -50%);  
+    background-color: var(--light1);
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    transition: transform 0.3s ease;
+    z-index: 99999;
+  }
+  
+  .link-hover:hover ~ .cursor {
+    transform: translate(-50%, -50%) scale(4);
+  }
+  
+  .button-hover:hover ~ .cursor {
+    transform: translate(-50%, -50%) scale(2);
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: none;
+  width: 3rem;
+  height: 3rem;
+  display: inline-flex;
+  flex-direction: column;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.button:hover {
+  background-color: var(--dark2); filter: saturate(0);
+  transition: 0.2s ease;
+  transform: scale(1.2);
+}
+
+.button:active {
+  background-color: var(--dark1); filter: saturate(0);
+  transition: 0.2s ease;
+}
+
+.home-button {
+  background-color: var(--dark3); filter: saturate(0);
+  color: var(--text);
+  border: none;
+  border-radius: 50%;
+}
+
+.text-circle{
+  font-size: 4rem;
+  font-family: 'Inter',sans-serif;
+  text-transform: uppercase;
+  animation: spin 6s linear infinite;
+  color: var(--text);
+}
+@keyframes spin{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
 }
 
 .fa {
@@ -204,4 +240,5 @@ span {
 .fa-brands {
   text-decoration: none;
   color: var(--text);
+  letter-spacing: unset;
 }

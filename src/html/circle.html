@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circular Text animation</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            width: 100%;
+            height: 100vh;
+            background-color: #24282b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        #text-circle{
+            font-size: 3vmin;
+            font-family: 'Inter';
+            text-transform: uppercase;
+            animation: spin 6s linear infinite;
+            color: #bebbbc;
+        }
+        @keyframes spin{
+            100%{
+                transform: rotate(-360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="text-circle" class="circspace">
+        the end is never the end is never the end is never the end is never
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/circletype@2.3.0/dist/circletype.min.js"></script>
+
+    <script>
+        let textcircle = new CircleType(document.getElementById('text-circle'));
+        textcircle.raduis(360);
+    </script>
+    <script src="../scripts/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daudix UFO</title>
+  <link rel="stylesheet" href="../styles/exp.css">
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="icon" type="image/gif" href="../images/favicon.gif">
+  <link rel="apple-touch-icon" href="../images/apple-touch-icon.png" sizes="180x180"></head>
+<body>
+
+    <button>View the Experience</button>
+    <svg xmlns="http://www.w3.org/2000/svg" xml:lang="en"
+    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+    <title>Circular Text Path</title>
+
+    <defs>
+        <path id="textcircle"
+              d="M250,400
+                 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z"
+              transform="rotate(12,250,250)"/>
+    </defs>
+    <rect width="100%" height="100%" fill="none" />
+    <text>
+        <textPath xlink:href="#textcircle"
+                  aria-label="All for One &amp; One for All"
+                  textLength="942">VIEW THE EXPERIENCE.</textPath>
+    </text>
+</svg>
+
+<script>
+
+    const circleSvg = document.querySelector('svg')
+    const btn = document.querySelector('button')
+
+    let mouseX = 0
+    let mouseY = 0
+
+    window.addEventListener('mousemove', (event) => {
+        // circleSvg.style.top = event.clientY
+        // circleSvg.style.left = event.clientX
+
+        mouseX = (event.clientX / 16) - (45 / 16) + 'rem'
+        mouseY = (event.clientY / 16) - (45 / 16) + 'rem'
+    })
+
+    const mousemove = () => {
+        circleSvg.style.left = mouseX
+        circleSvg.style.top = mouseY
+
+        window.requestAnimationFrame(mouseMove)
+    }
+
+    mouseMove()
+
+</script>
+
+</body>
+</html>
