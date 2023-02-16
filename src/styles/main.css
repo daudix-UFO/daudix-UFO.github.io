@@ -205,29 +205,31 @@ span {
 }
 
 .home-button {
+  margin: 2rem;
   background-color: var(--dark3); filter: saturate(0);
   color: var(--text);
   border: none;
   border-radius: 50%;
 }
 
-.text-circle{
-  font-size: 4rem;
+.text-circle {
+  margin: auto;
+  width: 0;
+  font-size: 2rem;
   font-family: 'Inter',sans-serif;
   text-transform: uppercase;
   animation: spin 6s linear infinite;
-  color: var(--text);
 }
-@keyframes spin{
+@keyframes spin {
 	0%{
 		transform: rotate(0deg);
 	}
 	100%{
-		transform: rotate(360deg);
+		transform: rotate(-360deg);
 	}
 }
 
-.fa {
+/* .fa {
   text-decoration: none;
   color: var(--text);
 }
@@ -240,4 +242,4 @@ span {
 .fa-brands {
   text-decoration: none;
   color: var(--text);
-}
+} */
