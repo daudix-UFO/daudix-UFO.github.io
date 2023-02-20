@@ -4,20 +4,11 @@ title: Nothing here
 description: The End Is Never…
 ---
 
-<details>
-    <summary>I'm sorry, but there is nothing interesting.</summary>
-<pre>
-Useless info about Me
+Hi, I'm David Lapshin (Давид Лапшин)
 
-Who am I?
+I born in 4 of October in Siberia
 
-I'm David Lapshin (Давид Лапшин)
-
-Where and when I born?
-
-I born in 4 of October of #### in Siberia
-
-Things I love
+Some things I love
 
 - GNU/Linux and Open Source
 - Photographing landscapes and nature
@@ -26,22 +17,13 @@ Things I love
 - Experementing with new stuff
 - Sleep (Looong most of time)
 - Being pretty lazy :D
-</pre>
-</details>
 
-<details>
-    <summary>Sorry :(</summary>
-<pre>
-My nickname
+What my nickname means?
 
 Daudix UFO = My name in arabic (Daud) + IX + UFO
 
 Why UFO?
 
 Because why not :P
-</pre>
-</details>
-
-###### Don't touch anything here for now ;)
 
 [🡨 Back](https://daudix-ufo.github.io)
